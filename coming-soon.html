@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TRC TradeCom - Coming Soon</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+    overflow:hidden;
+    background:
+    radial-gradient(circle at top,#3b2b00 0%,#120d00 40%,#050505 100%);
+    color:#fff;
+    position:relative;
+}
+
+/* Background Glow */
+
+.glow{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(80px);
+    opacity:0.4;
+    animation:float 8s infinite ease-in-out;
+}
+
+.glow1{
+    width:300px;
+    height:300px;
+    background:#ffcc00;
+    top:-100px;
+    left:-100px;
+}
+
+.glow2{
+    width:250px;
+    height:250px;
+    background:#ff9900;
+    bottom:-100px;
+    right:-100px;
+    animation-delay:2s;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(-25px);
+    }
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+/* Main Card */
+
+.container{
+    width:100%;
+    max-width:650px;
+    position:relative;
+    z-index:2;
+}
+
+.card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,215,0,0.2);
+    backdrop-filter:blur(15px);
+    border-radius:30px;
+    padding:45px 28px;
+    text-align:center;
+    box-shadow:
+    0 0 30px rgba(255,215,0,0.15),
+    inset 0 0 15px rgba(255,215,0,0.05);
+    animation:fadeIn 1.2s ease;
+}
+
+/* Logo */
+
+.logo{
+    width:90px;
+    height:90px;
+    margin:auto;
+    margin-bottom:25px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#ffd700,#ff9900);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:34px;
+    font-weight:700;
+    color:#111;
+    box-shadow:0 0 30px rgba(255,215,0,0.5);
+    animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+    0%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.06);
+    }
+    100%{
+        transform:scale(1);
+    }
+}
+
+/* Text */
+
+h1{
+    font-size:46px;
+    line-height:1.2;
+    margin-bottom:20px;
+    background:linear-gradient(to right,#ffd700,#ffae00);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.subtitle{
+    font-size:17px;
+    line-height:1.9;
+    color:#e8e8e8;
+}
+
+.highlight{
+    color:#ffd700;
+    font-weight:600;
+}
+
+/* Loader */
+
+.loader{
+    width:100%;
+    height:10px;
+    background:rgba(255,255,255,0.08);
+    border-radius:50px;
+    overflow:hidden;
+    margin:35px 0 20px;
+}
+
+.loader span{
+    display:block;
+    width:40%;
+    height:100%;
+    border-radius:50px;
+    background:linear-gradient(90deg,#ffd700,#ff9900);
+    animation:loading 2s infinite ease-in-out;
+}
+
+@keyframes loading{
+    0%{
+        transform:translateX(-100%);
+    }
+    100%{
+        transform:translateX(300%);
+    }
+}
+
+/* Footer */
+
+.footer{
+    margin-top:15px;
+    color:#c7c7c7;
+    font-size:14px;
+}
+
+/* Animation */
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Mobile */
+
+@media(max-width:600px){
+
+    .card{
+        padding:38px 22px;
+        border-radius:24px;
+    }
+
+    h1{
+        font-size:34px;
+    }
+
+    .subtitle{
+        font-size:15px;
+        line-height:1.8;
+    }
+
+    .logo{
+        width:75px;
+        height:75px;
+        font-size:28px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Background Glow -->
+<div class="glow glow1"></div>
+<div class="glow glow2"></div>
+
+<!-- Main -->
+<div class="container">
+
+    <div class="card">
+
+        <!-- Logo -->
+        <div class="logo">
+            TRC
+        </div>
+
+        <!-- Title -->
+        <h1>
+            ICO Round 2 <br>
+            Coming Soon 🚀
+        </h1>
+
+        <!-- Text -->
+        <p class="subtitle">
+
+            TRC TradeCom is preparing for the official launch of
+            <span class="highlight">Referral-Based ICO Participation</span>.
+
+            Participate, build your network, and become part of the next-generation decentralized trading ecosystem powered by smart tokenomics and community growth.
+
+        </p>
+
+        <!-- Loader -->
+        <div class="loader">
+            <span></span>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            © 2026 TRC TradeCom • All Rights Reserved
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
